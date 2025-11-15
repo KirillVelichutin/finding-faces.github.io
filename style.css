@@ -14,6 +14,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    color: #FCF9F4;
+    background-color: #A43D3E;
+}
+
 body {
     background-color: #322E2B;
     color: #FCF9F4;
@@ -22,7 +27,6 @@ body {
 header {
     position: relative;
     height: 100vh;
-    padding: 34px 50px;
 }
 
 header::before {
@@ -43,6 +47,7 @@ header::before {
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
+    padding: 3vh 2vw;
 }
 
 .page-navigation {
@@ -61,6 +66,11 @@ header::before {
     color: white;
     font-family: "MorfinSans";
     font-size: 24px;
+    transition: color 250ms;
+}
+
+.page-navigation a:hover {
+    color: #A43D3E;
 }
 
 .red {
@@ -111,6 +121,11 @@ header::before {
     text-align: center;
     text-decoration: none;
     letter-spacing: 2px;
+    transition: background-color 250ms;
+}
+
+.btn:hover {
+    background-color: #e23f42;
 }
 
 .about-section {
@@ -189,7 +204,7 @@ h2, h3, h4, h5 {
 }
 
 .open-call-section {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     background-color: #FCF9F4;
     color: black;
@@ -201,7 +216,6 @@ h2, h3, h4, h5 {
 
 .open-call-heading {
     width: 40%;
-    height: 100%;
 }
 
 .open-call-text-conteiner {
@@ -228,9 +242,9 @@ h2, h3, h4, h5 {
 }
 
 .open-call-text-conteiner ul li::before {
-    content: "//"; /* Custom character or emoji */
-    color: #A43D3E; /* Custom color */
-    font-size: 1.2em; /* Custom size */
+    content: "//";
+    color: #A43D3E;
+    font-size: 1.2em;
 }
 
 .films {
@@ -279,18 +293,24 @@ h2, h3, h4, h5 {
 }
 
 .films button {
-    margin-top: 10vh;
+    margin: 10vh 0;
 }
 
 .members-cards-conteiner {
     display: grid;
     grid: repeat(2, 1fr) / repeat(3, 1fr);
     gap: 3vw;
+    padding: 0 3vw;
     place-items: center;
     margin-bottom: 3vw;
 }
 
+.members-cards-conteiner img {
+    width: 100%;
+}
+
 footer {
+    position: relative;
     border-top: 1px solid #FCF9F4;
     display: flex;
 }
@@ -332,8 +352,9 @@ footer div {
     text-align: center;
 }
 
-.ask-question-conteiner p:last-of-type {
+.rights {
     position: absolute;
+    font-size: 1.5em;
     bottom: 3vh;
     right: 3vw;
 }
@@ -347,13 +368,15 @@ footer div {
         content: "///";
         color: #FCF9F4;
         position: absolute;
-        top: 0;
-        left: 0;
+        font-weight: 900;
+        top: 2vh;
+        left: 5vw;
     }
     
     .page-navigation ul {
         display: flex;
         flex-direction: column;
+
     }
     
     .socials {
@@ -376,7 +399,7 @@ footer div {
 
     .open-call-text-conteiner {
         margin-top: 40vh;
-        margin-left: 5vh;
+        margin-left: 5vw;
     }
 
     .open-call-text-conteiner button {
@@ -395,6 +418,10 @@ footer div {
         margin: 10%;
     }
 
+    .films-list div:nth-child(odd) {
+        margin-top: 6vh;
+    }
+
     .film-image-background {
         width: 100%;
     }
@@ -403,4 +430,83 @@ footer div {
         display: none;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .page-navigation {
+        margin-top: 3vh;
+        margin-right: 3vw;
+    }
+
+    h2, h3, h4, h5 {
+        font-size: 3rem;
+        padding: 2vw 3vw;
+        font-family: "MorfinSans";
+    }
+
+    .open-call-section {
+        height: auto;
+    }
+    
+    .open-call-heading {
+        width: 100%;
+    }
+
+    .open-call-text-conteiner {
+        margin-top: 20vh;
+        font-size: 1.2em;
+        width: 75%;
+    }
+
+    .open-call-text-conteiner .btn {
+        margin: 7vh 0 0;
+        width: 200px;
+        font-size: 1em;
+    }
+
+    .films-heading {
+        padding-top: 3vh;        padding-left: 2vw;
+    }
+
+    .films button {
+        margin: 3vh 0;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    footer div {
+        width: 100%;
+    }
+
+    .look-for-anons {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin: 7vh 0 0;
+        padding: 0 15vw;
+    }
+
+    .look-for-anons-conteiner ul {
+        margin: 7vh auto;
+    }
+
+    .footer-diagonal-devider {
+        display: none;
+    }
+
+    .ask-question-conteiner p:first-of-type {
+        font-size: 0.7em;
+        margin-top: 2vh;
+    }
+
+    .rights {
+        position: absolute;
+        bottom: 2vh;
+        right: 5vw;
+    }
 }
