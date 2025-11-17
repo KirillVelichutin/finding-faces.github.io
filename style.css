@@ -219,7 +219,7 @@ h2, h3, h4, h5 {
 
 .open-call-text-conteiner {
     width: 60%;
-    margin: 10vh 0;
+    margin: 10vh 0 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,7 +368,7 @@ footer div {
     }
 
     .logo {
-        font-size: 1.3em;
+        font-size: 1.8rem;
     }
     
     .header-panel::before {
@@ -396,9 +396,11 @@ footer div {
     }
 
     .open-call-text-conteiner {
+        font-size: 2em;
         margin-top: 40vh;
         margin-left: 5vw;
-        width: 350px;
+        width: 400px;
+        padding-right: 0;
     }
 
     .open-call-text-conteiner .btn {
@@ -497,7 +499,7 @@ footer div {
     }
 
     .open-call-text-conteiner {
-        margin: 20vh 7vw 0;
+        margin: 22vh 7vw 0;
         font-size: 1.2em;
         width: 73%;
     }
