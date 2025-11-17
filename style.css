@@ -204,7 +204,6 @@ h2, h3, h4, h5 {
 }
 
 .open-call-section {
-    height: 100vh;
     display: flex;
     background-color: #FCF9F4;
     color: black;
@@ -220,7 +219,7 @@ h2, h3, h4, h5 {
 
 .open-call-text-conteiner {
     width: 60%;
-    margin: 5vh 0;
+    margin: 10vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,7 +229,7 @@ h2, h3, h4, h5 {
 }
 
 .open-call-text-conteiner .btn {
-    margin: 10vh 0;
+    margin: 7vh 0;
 }
 
 .open-call-text-conteiner ul {
@@ -272,7 +271,7 @@ h2, h3, h4, h5 {
     gap: 3vw;
 }
 
-.film-image-background {
+.film-image-conteiner {
     background-color: #FCF9F4;
     width: 370px;
     height: 220px;
@@ -305,8 +304,12 @@ h2, h3, h4, h5 {
     margin-bottom: 3vw;
 }
 
-.members-cards-conteiner img {
+.member-card {
     width: 100%;
+}
+
+.prev, .next {
+    display: none;
 }
 
 footer {
@@ -359,9 +362,13 @@ footer div {
     right: 3vw;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1120px) {
     .header-panel {
         justify-content: right;
+    }
+
+    .logo {
+        font-size: 1.3em;
     }
     
     .header-panel::before {
@@ -371,6 +378,7 @@ footer div {
         font-weight: 900;
         top: 2vh;
         left: 5vw;
+        font-size: 2rem;
     }
     
     .page-navigation ul {
@@ -383,6 +391,85 @@ footer div {
         display: none;
     }
 
+    .open-call-section {
+        flex-direction: column;
+    }
+
+    .open-call-text-conteiner {
+        margin-top: 40vh;
+        margin-left: 5vw;
+        width: 350px;
+    }
+
+    .open-call-text-conteiner .btn {
+        margin-top: 25vh;
+        margin-bottom: 0;
+    }
+    
+
+    .open-call-text-conteiner p:nth-child(n + 3), ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    header .btn {
+        width: 150px;
+        height: 50px;
+        font-size: 1rem;
+        padding: 17px;
+    }
+
+    .about-section > div {
+        font-size: 1rem;
+    }
+
+    .films-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10%;
+    }
+
+    .films-list div:nth-child(odd) {
+        margin-top: 6vh;
+    }
+
+    .film-image-conteiner {
+        width: 360px;
+    }
+    
+    .films-list div:nth-child(n + 5) {
+        display: none;
+    }
+
+    .look-for-anons-conteiner {
+        margin-left: 2vw;
+    }
+
+    .look-for-anons {
+        font-size: 2.3em;
+        margin: 20vh 3vw 0;
+    }
+
+    .look-for-anons-conteiner ul {
+        gap: 5vw;
+        margin:  20vh 0 0;
+    }
+
+    .footer-diagonal-devider {
+        height: 100vh;
+    }
+
+    .ask-question-conteiner p:first-of-type {
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
     .about-section {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -393,55 +480,6 @@ footer div {
         border-right: none;
     }
 
-    .open-call-section {
-        flex-direction: column;
-    }
-
-    .open-call-text-conteiner {
-        margin-top: 40vh;
-        margin-left: 5vw;
-    }
-
-    .open-call-text-conteiner button {
-        margin-top: 25vh;
-        margin-bottom: 0;
-    }
-    
-
-    .open-call-text-conteiner p:nth-child(n + 3), ul {
-        display: none;
-    }
-    
-    .films-list {
-        display: flex;
-        flex-direction: column;
-        margin: 10%;
-    }
-
-    .films-list div:nth-child(odd) {
-        margin-top: 6vh;
-    }
-
-    .film-image-background {
-        width: 100%;
-    }
-    
-    .films-list div:nth-child(n + 5) {
-        display: none;
-    }
-
-}
-
-@media screen and (max-width: 420px) {
-    .logo {
-        font-size: 1.5em;
-    }
-
-    .page-navigation {
-        margin-top: 3vh;
-        margin-right: 3vw;
-    }
-
     h2, h3, h4, h5 {
         font-size: 3rem;
         padding: 2vw 3vw;
@@ -450,6 +488,8 @@ footer div {
 
     .open-call-section {
         height: auto;
+        background-size: cover;
+        background-position: right;
     }
     
     .open-call-heading {
@@ -457,23 +497,54 @@ footer div {
     }
 
     .open-call-text-conteiner {
-        margin-top: 20vh;
+        margin: 20vh 7vw 0;
         font-size: 1.2em;
-        width: 75%;
+        width: 73%;
     }
 
     .open-call-text-conteiner .btn {
-        margin: 7vh 0 0;
+        margin: 5em 0 2em;
         width: 200px;
         font-size: 1em;
     }
 
     .films-heading {
-        padding-top: 3vh;        padding-left: 2vw;
+        padding-top: 3vh;
+        padding-left: 2vw;
     }
 
     .films button {
         margin: 3vh 0;
+    }
+
+    .members-cards-conteiner {
+        display: flex;
+        position: relative;
+    }
+
+    .prev, .next {
+        display: block;
+        position: absolute;
+        top: 0;
+        color: #A43D3E;
+        background: none;
+        border: none;
+        font-size: 2em;
+        height: 100%;
+    }
+
+    .prev {
+        left: 0;
+        padding-left: 5%;
+    }
+
+    .next {
+        right: 0;
+        padding-right: 5%;
+    }
+    
+    .next:hover .prev:hover {
+        background-color: rgba(0,0,0,0.7);
     }
 
     footer {
@@ -485,14 +556,15 @@ footer div {
     }
 
     .look-for-anons {
-        font-size: 1.5em;
+        font-size: 2em;
         line-height: 1.5em;
-        margin: 7vh 0 0;
-        padding: 0 15vw;
+        margin: 2.5em 0 0;
+        padding-left: 15vw;
     }
 
     .look-for-anons-conteiner ul {
-        margin: 7vh auto;
+        gap: 0;
+        margin: 10vh auto 15vh;
     }
 
     .footer-diagonal-devider {
@@ -501,7 +573,7 @@ footer div {
 
     .ask-question-conteiner p:first-of-type {
         font-size: 0.7em;
-        margin-top: 2vh;
+        margin-top: 2em;
     }
 
     .rights {
