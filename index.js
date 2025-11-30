@@ -1,4 +1,4 @@
-const mediaQuery = window.matchMedia('(max-width: 450px)');
+const mediaQuery = window.matchMedia('(max-width: 545px)');
 
 function handleScreenChange(e) {
     if (e.matches) {
