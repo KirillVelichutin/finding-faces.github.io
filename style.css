@@ -533,7 +533,7 @@ footer div {
 }
 
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 550px) {
     .logo {
         font-size: 1rem;
     }
